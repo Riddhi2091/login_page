@@ -1,8 +1,10 @@
 const signUp = document.getElementById('sign-up'),
     signIn = document.getElementById('sign-in'),
     loginIn = document.getElementById('login-in'),
-    loginUp = document.getElementById('login-up')
-
+    loginUp = document.getElementById('login-up'),
+    forgotPassword = document.getElementById('forgot-password'),
+    resetPassword = document.getElementById('reset-password'),
+    email = document.getElementById('email')
 
 signUp.addEventListener('click', ()=>{
     // Remove classes 
@@ -23,3 +25,17 @@ signIn.addEventListener('click', ()=>{
     loginIn.classList.toggle('block')
     loginUp.classList.toggle('none')
 })
+
+resetPassword.addEventListener("click", () => {
+  //remove class
+  forgotPassword.classList.remove("none");
+  loginIn.classList.remove("block");
+
+  // Add classes
+  forgotPassword.classList.toggle("block");
+  loginIn.classList.toggle("none");
+});
+
+
+
+// form validation
